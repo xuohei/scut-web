@@ -1,0 +1,17 @@
+/cleardns/AdGuardHome/data
+/cleardns/frpc/
+/cleardns/upstream/foreign.conf
+
+/freedom/boltv4.db
+/freedom/config.json
+
+/route/client.json
+/route/log/access.log
+/route/log/archive/
+/route/log/connection.log
+/route/log/error.log
+
+/scutweb/config/outbounds.json
+/scutweb/log/access.log
+/scutweb/log/archive/
+/scutweb/log/error.log

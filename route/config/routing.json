@@ -1,0 +1,175 @@
+{
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": "direct",
+        "outboundTag": "direct4"
+      },
+      {
+        "type": "field",
+        "inboundTag": "direct6",
+        "outboundTag": "direct6"
+      },
+      {
+        "type": "field",
+        "inboundTag": "proxy",
+        "outboundTag": "proxy4"
+      },
+      {
+        "type": "field",
+        "inboundTag": "proxy6",
+        "outboundTag": "proxy6"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy"
+        ],
+        "domain": [
+          "ip.menma01.com",
+          "ds.v6ns.vm3.test-ipv6.com"
+        ],
+        "balancerTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy6"
+        ],
+        "domain": [
+          "ip.menma01.com",
+          "ds.v6ns.vm3.test-ipv6.com"
+        ],
+        "balancerTag": "direct6"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy"
+        ],
+        "domain": [
+          "ip.343.re",
+          "dns.343.re",
+          "gist.github.com",
+          "raw.githubusercontent.com",
+          "domain:gstatic.com",
+          "domain:googleapis.cn",
+          "domain:xn--ngstr-lra8j.com"
+        ],
+        "balancerTag": "proxy"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy6"
+        ],
+        "domain": [
+          "ip.343.re",
+          "dns.343.re",
+          "gist.github.com",
+          "raw.githubusercontent.com",
+          "domain:gstatic.com",
+          "domain:googleapis.cn",
+          "domain:xn--ngstr-lra8j.com"
+        ],
+        "balancerTag": "proxy6"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy"
+        ],
+        "domain": [
+          "geosite:cn"
+        ],
+        "balancerTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy6"
+        ],
+        "domain": [
+          "geosite:cn"
+        ],
+        "balancerTag": "direct6"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "8.210.148.24",
+          "47.242.93.7",
+          "47.242.30.65",
+          "47.242.17.252",
+          "119.28.88.230",
+          "222.16.33.190"
+        ],
+        "balancerTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "2001:19f0:5:2236:5400:2ff:fefd:5c7c",
+          "2001:19f0:4401:6a4:5400:3ff:fea4:fb21"
+        ],
+        "balancerTag": "direct6"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy"
+        ],
+        "ip": [
+          "geoip:cn",
+          "geoip:private"
+        ],
+        "balancerTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy6"
+        ],
+        "ip": [
+          "geoip:cn",
+          "geoip:private"
+        ],
+        "balancerTag": "direct6"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy"
+        ],
+        "balancerTag": "proxy"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "tproxy6"
+        ],
+        "balancerTag": "proxy6"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "direct",
+        "selector": [ "direct4" ]
+      },
+      {
+        "tag": "direct6",
+        "selector": [ "direct6" ]
+      },
+      {
+        "tag": "proxy",
+        "selector": [ "proxy4" ]
+      },
+      {
+        "tag": "proxy6",
+        "selector": [ "proxy6" ]
+      }
+    ]
+  }
+}

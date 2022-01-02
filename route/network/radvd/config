@@ -1,0 +1,13 @@
+AdvSendAdvert=on
+AdvManagedFlag=off
+AdvOtherConfigFlag=off
+
+MinRtrAdvInterval=10
+MaxRtrAdvInterval=30
+MinDelayBetweenRAs=3
+
+AdvOnLink=on
+AdvAutonomous=on
+AdvRouterAddr=off
+AdvValidLifetime=600
+AdvPreferredLifetime=100

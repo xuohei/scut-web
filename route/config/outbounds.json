@@ -1,0 +1,65 @@
+{
+  "outbounds": [
+    {
+      "tag": "direct4",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "direct6",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.168.2.2",
+            "port": 1086
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy4",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "192.168.2.5",
+            "port": 20170
+          }
+        ]
+      }
+    },
+    {
+      "tag": "proxy6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "...",
+            "port": 443,
+            "users": [
+              {
+                "id": "...",
+                "encryption": "none",
+                "flow": "xtls-rprx-direct"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "xtls",
+        "xtlsSettings": {
+          "allowInsecure": false,
+          "serverName": "yang.343.re"
+        }
+      }
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {}
+    }
+  ]
+}

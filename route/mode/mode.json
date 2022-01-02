@@ -1,0 +1,9 @@
+{
+  "route": [ "direct4", "direct6", "proxy4", "proxy6"],
+  "direct": [ "direct4", "direct6", "direct4", "direct6"],
+  "proxy": [ "proxy4", "proxy6", "proxy4", "proxy6"],
+  "ipv4-route": [ "direct4", "block", "proxy4", "block"],
+  "ipv4-direct": [ "direct4", "block", "direct4", "block"],
+  "ipv4-proxy": [ "proxy4", "block", "proxy4", "block"],
+  "none": [ "block", "block", "block", "block"]
+}
